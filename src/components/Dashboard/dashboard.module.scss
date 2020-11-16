@@ -1,0 +1,16 @@
+@import '../../scss/variables/colors';
+@import '../../scss/variables/fonts';
+@import '../../scss/variables/spacing';
+
+.dashboard {
+  background-color: $alabaster;
+  border: 1px solid $silver;
+  max-width: 600px;
+  margin: $spacing-regular auto;
+  padding: $spacing-large;
+  text-align: left;
+}
+
+.heading {
+  font-size: $font-large;
+}

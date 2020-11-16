@@ -1,0 +1,58 @@
+@import '../../scss/variables/borders';
+@import '../../scss/variables/colors';
+@import '../../scss/variables/fonts';
+@import '../../scss/variables/spacing';
+
+.button {
+  border: transparent solid $border-width;
+  border-radius: $border-radius;
+  display: block;
+  font-size: $font-regular;
+  margin: $spacing-medium 0;
+  padding: $spacing-text $spacing-regular;
+  position: relative;
+
+  &.primary {
+    background-color: $brand-primary;
+    border-color: transparent;
+    color: $brand-white;
+
+    &:hover,
+    &:focus {
+      background-color: lighten($brand-primary, 20%);
+
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -3px;
+        bottom: -3px;
+        left: -3px;
+        right: -3px;
+        border: $brand-interaction solid $border-width;
+        border-radius: $border-radius * 2;
+      }
+      outline: none;
+    }
+  }
+
+  &.outline {
+    background-color: $brand-white;
+    border-color: $brand-black;
+    color: $brand-black;
+
+    &:hover {
+      background-color: $brand-black;
+      color: $brand-white;
+    }
+  }
+
+  &:disabled,
+  &:disabled:hover,
+  &:disabled:focus {
+    background-color: $silver;
+    &:after {
+      border: none;
+    }
+  }
+}
